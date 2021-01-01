@@ -1,0 +1,82 @@
+A:link { text-decoration: none; }
+A:visited { text-decoration: none; }
+A:active { text-decoration: none; }
+h2 {
+  font-family: Roboto-bold, sans-serif;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+}
+body {
+  margin:0 auto;
+  padding:0 0;
+}
+.container{
+  max-width: 945px;
+  padding: 0 0;
+  margin: 0 auto;
+}
+.navbar {
+  display:grid;
+  grid-template: 80px / auto auto auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.navbar a {
+	font-family: Roboto-bold, sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #828282;
+}
+.navbar a:hover {
+	color: #070707;
+}
+.main-text{
+  display:grid;
+  grid-template: 188px / 1fr 1fr 1fr;
+}
+.name {
+  font-family: Roboto-bold, sans-serif;
+  font-size: 48px;
+  align-self:end;
+}
+.prof {
+  justify-self: center;
+  align-self:end;
+  font-family: Roboto-medium, sans-serif;
+  font-size: 18px;
+  padding:35px;
+}
+.lng {
+  position:relative;
+  align-self:end;
+}
+.switcher {
+  position:absolute;
+  right: 1px;
+  bottom:50%;
+}
+.lng p{
+  font-family: Roboto-bold, sans-serif;
+  font-size: 16px;
+  transform: rotate(-90deg);
+}
+.main-photo{
+  margin-bottom:115.25px;
+}
+.about-me {
+  padding-top:115.25px;
+  height: 506px;
+  background: #F6F6F6;
+}
+.about-me p{
+  display: block;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  font-family: Roboto-medium, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #070707;
+}
