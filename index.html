@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="ENG">
   <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href = "fonts/gilroy/stylesheet.css" rel = "stylesheet" type = "text/css" />
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -19,6 +21,18 @@
           <a href="#portfolio">Portfolio</a>
           <a href="#footer">Contacts</a>
         </nav>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>  <ul class="menu__box">
+            <li><a class="menu__item" href="#">Home</a></li>
+            <li><a class="menu__item" href="#">About me</a></li>
+            <li><a class="menu__item" href="#">Skills</a></li>
+            <li><a class="menu__item" href="#">Portfolio</a></li>
+            <li><a class="menu__item" href="#">Contacts</a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="main-info">
@@ -26,13 +40,14 @@
         <div class="main-text">
           <p class="name">Denis<br>Novik</p>
           <p class="prof">UX | UI designer<br>24 years old, Minsk</p>
-          <div class="lng"><div class="switcher"><p>RU | ENG</p></div></div>
+          <div class="lng"><div class="lng_switcher"><p>RU | <span class="bold">ENG</span></p></div></div>
         </div>
       </div>
     </section>
     <section class="main-photo">
       <div class="container">
-        <img src="img\2.1.jpg" alt="">
+        <img class="desktop" src="img\2.1.jpg" alt="">
+        <img class="mobile" src="img\mobile.jpg" alt="">
       </div>
     </section>
     <section class="about-me">
@@ -51,26 +66,98 @@
     <section class="skills">
       <div class="container">
         <h2>Skills</h2>
-        <p>I work in such programs as</p>
-          <div class="programs">
-            <div class="PS">
+        <p class="skills_description">I work in such programs as</p>
+          <ul class="programs">
+            <li class="program PS">
               <img src="icons\AE.png" alt="">
               <p>Adobe<br>Photoshop</p>
-            </div>
-            <div class="AI">
+              <span class="program_stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span style="color:#E5E5E5;">
+              <i class="fas fa-star"></i>
+              </span>
+              </span>
+            </li>
+            <li class="program AI">
               <img src="icons\AI.png" alt="">
               <p>Adobe<br>Illustrator</p>
-            </div>
-            <div class="AE">
+              <span class="program_stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span style="color:#E5E5E5;">
+              <i class="fas fa-star"></i>
+              </span>
+              <span style="color:#E5E5E5;">
+              <i class="fas fa-star"></i>
+              </span>
+              </span>
+            </li>
+            <li class="program AE">
               <img src="icons\AE.png" alt="">
               <p>Adobe<br>After Effects</p>
-            </div>
-            <div class="FA">
+              <span class="program_stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span style="color:#E5E5E5;">
+              <i class="fas fa-star"></i>
+              </span>
+              </span>
+            </li>
+            <li class="program FA">
               <img src="icons\Figma.png" alt="">
               <p>Figma</p>
-            </div>
-          </div>
+              <span class="program_stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span style="color:#E5E5E5;">
+              <i class="fas fa-star"></i>
+              </span>
+              </span>
+            </li>
+          </ul>
       </div>
     </section>
+    <section class="portfolio">
+      <div class="container footer_container">
+        <h2>Portfolio</h2>
+        <img class="portfolio_img" src="img\8.jpg">
+        <a class="portfolio_link" href="#">Online fashion store - Homepage</a>
+        <img class="portfolio_img" src="img\reebok_web.jpg">
+        <a class="portfolio_link" href="#">Reebok Store - Concept</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer_container">
+        <h2>Contacts</h2>
+        <p class="footer_description">Want to know more or just chat?<br>You are welcome!
+        </p>
+        <button   class="footer_button"type="button" name="button">Send message
+        </button>
+        <ul class="footer_social_list">
+          <li class="socia_list_icon">
+            <i class="fab fa-linkedin"></i>
+          </li>
+          <li class="socia_list_icon">
+            <i class="fab fa-instagram"></i>
+          </li>
+          <li class="socia_list_icon">
+            <i class="fab fa-behance-square"></i>
+          </li>
+          <li class="socia_list_icon">
+            <i class="fas fa-basketball-ball"></i>
+          </li>
+        </ul>
+      <p class="last_words">Like me on<br>
+LinkedIn, Instagram, Behance, Dribble</p>
+      </div>
+    </footer>
   </body>
 </html>
