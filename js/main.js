@@ -1,9 +1,5 @@
 document.querySelector('.en_switcher').onclick = showContent
 document.querySelector('.ru_switcher').onclick = showContent
-const lngButtonEn = document.querySelector('.en_switcher')
-const lngButtonRu = document.querySelector('.ru_switcher')
-console.log(lngButtonEn)
-console.log(lngButtonRu)
 function showContent () {
   if (this.classList.contains('en')) {
   let x = document.querySelectorAll(".en")
