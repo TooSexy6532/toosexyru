@@ -40,7 +40,7 @@ body {
   align-items: center;
   position: relative;
 }
-.hamburger-menu{
+.hamburger_menu{
   display:none;
 }
 .navbar a {
@@ -62,7 +62,7 @@ body {
   border: 1px solid black;
   width: 100%;
 }
-.main-text{
+.main_text{
   display:grid;
   grid-template: 188px / repeat(3, 1fr);
 }
@@ -83,28 +83,30 @@ body {
 }
 .lng {
   position:relative;
-}
+  }
 .lng_switcher {
   position:absolute;
   right: -7%;
   bottom:35%;
+
 }
-.lng p{
+.lng_button{
   font-family: Gilroy;
   font-size: 16px;
   transform: rotate(-90deg);
+  transition-duration: 1s;
 }
-.main-photo{
+.main_photo{
   margin-bottom:110px;
 }
-.main-photo img {
+.main_photo img {
   width: 100%;
 }
-.about-me {
+.about_me {
   padding:100px 0;
   background: #F6F6F6;
 }
-.about-me p{
+.about_me_description{
   display: block;
   margin-top: 2.5em;
   font-family: Roboto-medium, sans-serif;
@@ -226,17 +228,89 @@ body {
   text-align: center;
   color: #828282;
 }
+.ru {
+  display: none;
+}
+.en {
+  display: block;
+}
+.modal_dialog {
+    display: none;
+    position: fixed;
+    bottom:0%;
+    left: 0%;
+    z-index: 1;
+    height: 100%;
+    width:100%;
+    background-color: transparent;
+}
+.modal_form{
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:100px auto;
+  max-width: 320px;
+  max-height: 650px;
+  font-family: Gilroy;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #070707;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+}
+.modal_form input[type=text]{
+  max-width: 80%;
+  margin-bottom: 30px;
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #828282;
+  border: none;
+  border-radius:20px;
+  cursor: pointer;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+}
+.modal_form_button{
+  display: block;
+  margin: 0 10px 30px 10px;
+  border: none;
+  background: black;
+  color: white;
+  font-family: Gilroy;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  height: 42px;
+  width: 120px;
+  border-radius:20px;
+  flex: 1;
+}
+.modal_form_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.modal_form h3{
+  margin:30px auto;
+  font-family: Gilroy;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
 @media (max-width: 600px){
   .navbar{
     display: none;
   }
-  .hamburger-menu{
+  .hamburger_menu{
     display: block;
   }
-  #menu__toggle {
+  #menu_toggle {
     opacity: 0;
   }
-  .menu__btn {
+  .menu_btn {
     display: flex;
     align-items: center;
     position: fixed;
@@ -247,9 +321,9 @@ body {
     cursor: pointer;
     z-index: 1;
   }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
+  .menu_btn > span,
+  .menu_btn > span::before,
+  .menu_btn > span::after {
     display: block;
     position: absolute;
     width: 100%;
@@ -257,15 +331,15 @@ body {
     background-color: #616161;
     transition-duration: .25s;
   }
-  .menu__btn > span::before {
+  .menu_btn > span::before {
     content: '';
     top: -8px;
   }
-  .menu__btn > span::after {
+  .menu_btn > span::after {
     content: '';
     top: 8px;
   }
-  .menu__box {
+  .menu_box {
     transition-duration: .25s;
     display: block;
     position: fixed;
@@ -280,7 +354,7 @@ body {
     background-color: #FFFFFF;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   }
-  .menu__item {
+  .menu_item {
     display: block;
     padding: 12px 24px;
     color: #828282;
@@ -290,33 +364,31 @@ body {
     text-decoration: none;
     transition-duration: .25s;
   }
-  .menu__item:hover {
+  .menu_item:hover {
     color: #090909;
   }
-  #menu__toggle:checked ~ .menu__btn > span {
+  #menu_toggle:checked ~ .menu_btn > span {
     transform: rotate(45deg);
   }
-  #menu__toggle:checked ~ .menu__btn > span::before {
+  #menu_toggle:checked ~ .menu_btn > span::before {
     top: 0;
     transform: rotate(0);
   }
-  #menu__toggle:checked ~ .menu__btn > span::after {
+  #menu_toggle:checked ~ .menu_btn > span::after {
     top: 0;
     transform: rotate(90deg);
   }
-  #menu__toggle:checked ~ .menu__box {
+  #menu_toggle:checked ~ .menu_box {
     visibility: visible;
     left: 0;
   }
-
-
   .container{
     margin: 0 30px;
   }
   .lng{
     display: none;
   }
-  .main-text{
+  .main_text{
     display:grid;
     grid-template: auto auto / 1fr;
   }
@@ -339,10 +411,10 @@ body {
   .desktop{
     display: none;
   }
-  .main-photo{
+  .main_photo{
     margin-bottom:80px;
   }
-  .about-me {
+  .about_me {
     padding:80px 0;
   }
   .skills {
