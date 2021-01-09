@@ -16,6 +16,16 @@ ul {
   padding: 0 0;
 }
 
+button {}
+
+button:focus {
+  border: none;
+  outline: none;
+  color: black;
+  background-color: #F6F6F6;
+  transition: 0.2s;
+}
+
 body {
   font-family: 'Gilroy';
   margin: 0 auto;

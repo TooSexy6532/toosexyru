@@ -1,6 +1,9 @@
 document.querySelector('.en_switcher').onclick = showContent
 document.querySelector('.ru_switcher').onclick = showContent
-
+const popup = document.querySelector('.modal_dialog')
+const popupForm = document.querySelector('.modal_form')
+console.log(popup)
+console.log(popupForm)
 function showContent() {
   if (this.classList.contains('en')) {
     let x = document.querySelectorAll(".en")
@@ -26,11 +29,18 @@ function showContent() {
 }
 
 function openForm() {
-  document.querySelector('.modal_dialog').style.display = "block"
+  popup.style.display = "block"
+  popup.classList.add("visible")
   console.log('Открыл форму')
 }
 
 function closeForm() {
-  document.querySelector('.modal_dialog').style.display = "none";
+  popup.style.display = "none"
+  popup.classList.remove("visible")
   console.log('Закрыл форму')
 }
+
+//
+// document.onclick = function() {
+//     popup.classList.contains("visible") ? console.log('Форма открыта, кликнул вне её') : console.log('Форма закрыта');
+// }
