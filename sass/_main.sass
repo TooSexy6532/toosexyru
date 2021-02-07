@@ -1,0 +1,62 @@
+.main
+    padding-bottom: 75px
+    background-color: #ffffff
+    @media (max-width: 600px)
+        padding-bottom: 20px
+    &__desktop
+        @media (max-width: 600px)
+            display: none
+        @media (max-width: 1024px)
+            max-width: 100%
+    &__mobile
+       display: none
+       @media (max-width: 600px)
+            display: block
+            width: 100%
+    &__text
+        display: flex
+        align-items: flex-end
+        margin: 0
+        padding-bottom: 50px
+        justify-content: space-between
+        height: 120px
+        @media (max-width: 600px)
+            flex-direction: column
+            align-items: flex-start
+            padding-bottom: 30px
+            height: 200px
+        @media (max-width: 1024px)
+            padding-bottom: 30px
+        .main__name
+            font-weight: 700
+            font-size: 46px
+            line-height: 46px
+            flex-basis: 155px
+            @media (max-width: 600px)
+                margin-top: 40px;
+        .main__prof
+            font-weight: 500
+            font-size: 18px
+            line-height: 26px
+            flex-basis: 155px
+            @media (max-width: 600px)
+                margin-top: 30px;
+        .main__lng
+            position: relative
+            transform: rotate(-90deg)
+            flex-basis: 155px
+            @media (max-width: 600px)
+                display: none
+            .lng_switcher
+                position: absolute
+                right: 10px
+                bottom: -75px
+                color: rgba(130, 130, 130, 1)
+                z-index: 1;
+                @media (max-width: 1024px)
+                    right: 0
+                &_button_active
+                    font-weight: 700
+                    color: rgba(7, 7, 7, 1)
+                &:hover
+                    cursor: pointer

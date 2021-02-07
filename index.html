@@ -2,30 +2,33 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="fonts/gilroy/stylesheet.css" rel="stylesheet" type="text/css" />
-    <title>Portfolio</title>
+    <title>TS Portfolio</title>
 </head>
 
 <body class="body">
-    <section class="header" id="header">
+    <header class="header" id="header">
         <div class="container">
-            <nav class="navbar">
-                <a href="#header" class="en" lang="en">Home</a>
-                <a href="#header" class="ru" lang="ru">Домой</a>
-                <a href="#about_me" class="en" lang="en">About me</a>
-                <a href="#about_me" class="ru" lang="ru">Обо мне</a>
-                <a href="#skills" class="en" lang="en">Skills</a>
-                <a href="#skills" class="ru" lang="ru">Скилзы</a>
-                <a href="#portfolio" class="en" lang="en">Portfolio</a>
-                <a href="#portfolio" class="ru" lang="ru">Портфолио</a>
-                <a href="#footer" class="en" lang="en">Contacts</a>
-                <a href="#footer" class="ru" lang="ru">Контакты</a>
+            <nav class="header__navbar">
+                <a href="#" class="en" lang="en">Home</a>
+                <a href="#" class="ru hidden" lang="ru">Домой</a>
+                <a href="#" class="en" lang="en">About me</a>
+                <a href="#" class="ru hidden" lang="ru">Обо мне</a>
+                <a href="#" class="en" lang="en">Skills</a>
+                <a href="#" class="ru hidden" lang="ru">Навыки</a>
+                <a href="#" class="en" lang="en">Portfolio</a>
+                <a href="#" class="ru hidden" lang="ru">Портфолио</a>
+                <button class="header__button btn" type="button" name="button">
+                    <span class="en">Send message</span>
+                    <span class="ru hidden">Связаться</span>
+                </button>
             </nav>
             <div class="hamburger_menu">
                 <input id="menu_toggle" type="checkbox" />
@@ -40,61 +43,54 @@
                     <li><a class="menu_item" href="#footer">Contacts</a></li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section class="main_info">
+        </div>    
+    </header>
+    <main class="main section" id="main">
         <div class="container">
-            <div class="main_text">
-                <p class="name en">Denis<br>Novik</p>
-                <p class="name ru">Денис<br>Новик</p>
-                <p class="prof ru">UX | UI дизайнер<br>24 года, Минск</p>
-                <p class="prof en">UX | UI designer<br>24 years old, Minsk</p>
-                <div class="lng">
-                    <div class="lng_switcher en en_switcher">
-                        <p class="lng_button">RU | <span class="bold">ENG</span></p>
-                    </div>
-                    <div class="lng_switcher ru ru_switcher">
-                        <p class="lng_button "><span class="bold">RU</span> | ENG</p>
+            <div class="main__text">
+                <div class="main__name en">Too<br>Sexy</div>
+                <div class="main__name ru hidden">Ту<br>Секси</div>
+                <div class="main__prof ru hidden">Frontend<br> разработчик</div>
+                <div class="main__prof en">Frontend<br>developer</div>
+                <div class="main__lng">
+                    <div class="lng_switcher">
+                        <span class="lng_switcher_button rus">РУС</span> | <span class="lng_switcher_button lng_switcher_button_active eng">ENG</span>
                     </div>
                 </div>
             </div>
+            <img class="main__desktop" src="img/2.1.jpg" alt="">
+            <img class="main__mobile" src="img/mobile.jpg" alt="">
         </div>
-    </section>
-    <section class="main_photo">
-        <div class="container">
-            <img class="desktop" src="img/2.1.jpg" alt="">
-            <img class="mobile" src="img/mobile.jpg" alt="">
-        </div>
-    </section>
-    <section class="about_me" id="about_me">
+    </main>
+    <section class="about-me section" id="about_me">
         <div class="container">
             <h2 class="en">About me</h2>
-            <h2 class="ru">Обо мне</h2>
-            <p class="about_me_description en">Hi, I'm Denis – UX/UI designer from Minsk.<br>
+            <h2 class="ru hidden">Обо мне</h2>
+            <p class="about-me__description en">Hi, I'm Denis – UX/UI designer from Minsk.<br>
                 I'm interested in design and everything connected with it.</p>
-            <p class="about_me_description ru">Привет, Я Денис – UX/UI дизайнер из Минска.<br>
+            <p class="about-me__description ru hidden">Привет, Я Денис – UX/UI дизайнер из Минска.<br>
                 Я увлечен дизайном и всем что связано с ним.</p>
-            <p class="about_me_description en">I'm studying at courses "Web and mobile design<br>
+            <p class="about-me__description en">I'm studying at courses "Web and mobile design<br>
                 interfaces" in IT-Academy.</p>
-            <p class="about_me_description ru">Я учусь на курсах "Web и мобильный дизайн<br>
+            <p class="about-me__description ru hidden">Я учусь на курсах "Web и мобильный дизайн<br>
                 интерфейсов"" в IT-Academy.</p>
-            <p class="about_me_description en">Ready to implement excellent projects<br>
+            <p class="about-me__description en">Ready to implement excellent projects<br>
                 with wonderful people.</p>
-            <p class="about_me_description ru">Готов реализовать отличные проекты<br>
+            <p class="about-me__description ru hidden">Готов реализовать отличные проекты<br>
                 с замечательными людьми.</p>
         </div>
     </section>
-    <section class="skills" id="skills">
+    <section class="skills section" id="skills">
         <div class="container">
             <h2 class="en">Skills</h2>
-            <h2 class="ru">Скилзы</h2>
-            <p class="skills_description en">I work in such programs as</p>
-            <p class="skills_description ru">Я работаю в таких программах как</p>
-            <ul class="programs">
-                <li class="program PS">
+            <h2 class="ru hidden">Навыки</h2>
+            <p class="skills__description en">I work in such programs as</p>
+            <p class="skills__description ru hidden">Я работаю в таких программах как</p>
+            <ul class="skills__programs">
+                <li class="skills__program PS">
                     <img src="icons/AE.png" alt="">
                     <p>Adobe<br>Photoshop</p>
-                    <span class="program_stars">
+                    <span class="skills__program_stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -104,10 +100,10 @@
                         </span>
                     </span>
                 </li>
-                <li class="program AI">
+                <li class="skills__program AI">
                     <img src="icons/AI.png" alt="">
                     <p>Adobe<br>Illustrator</p>
-                    <span class="program_stars">
+                    <span class="skills__program_stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -119,10 +115,10 @@
                         </span>
                     </span>
                 </li>
-                <li class="program AE">
+                <li class="skills__program AE">
                     <img src="icons/AE.png" alt="">
                     <p>Adobe<br>After Effects</p>
-                    <span class="program_stars">
+                    <span class="skills__program_stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -132,10 +128,10 @@
                         </span>
                     </span>
                 </li>
-                <li class="program FA">
+                <li class="skills__program FA">
                     <img src="icons/Figma.png" alt="">
                     <p>Figma</p>
-                    <span class="program_stars">
+                    <span class="skills__program_stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -148,62 +144,70 @@
             </ul>
         </div>
     </section>
-    <section class="portfolio" id="portfolio">
-        <div class="container footer_container">
+    <section class="portfolio section" id="portfolio">
+        <div class="container ">
             <h2 class="en">Portfolio</h2>
-            <h2 class="ru">Портфолио</h2>
-            <img class="portfolio_img" src="img/8.jpg" alt="preview of project">
-            <a class="portfolio_link" href="#">Online fashion store - Homepage</a>
-            <img class="portfolio_img" src="img/reebok_web.jpg" alt="preview of project">
-            <a class="portfolio_link" href="#" >Reebok Store - Concept</a>
+            <h2 class="ru hidden">Портфолио</h2>
+            <img class="portfolio__img" src="img/8.jpg" alt="preview of project">
+            <a class="portfolio__link" href="#">Online fashion store - Homepage</a>
+            <img class="portfolio__img" src="img/reebok_web.jpg" alt="preview of project">
+            <a class="portfolio__link" href="#">Reebok Store - Concept</a>
         </div>
     </section>
-    <footer class="footer" id="footer">
-        <div class="container footer_container">
+    <footer class="footer section" id="footer">
+        <div class="container">
             <h2 class="en">Contacts</h2>
-            <h2 class="ru">Контакты</h2>
-            <p class="footer_description en">Want to know more or just chat?<br>You are welcome!
+            <h2 class="ru hidden">Контакты</h2>
+            <p class="footer__description en">Want to know more or just chat?<br>You are welcome!
             </p>
-            <p class="footer_description ru">Хочешь узнать больше или просто пообщаться?<br>Добро пожаловать!
+            <p class="footer__description ru">Хочешь узнать больше или просто пообщаться?<br>Добро пожаловать!
             </p>
-            <button class="footer_button" type="button" name="button" onclick="openForm()">
+            <button class="footer__button btn" type="button" name="button">
                 <span class="en">Send message</span>
-                <span class="ru">Связаться</span>
+                <span class="ru hidden">Связаться</span>
             </button>
-            <ul class="footer_social_list">
-                <li class="socia_list_icon">
+            <ul class="footer__social_list">
+                <li class="footer__list_icon">
                     <i class="fab fa-linkedin"></i>
                 </li>
-                <li class="socia_list_icon">
+                <li class="footer__list_icon">
                     <i class="fab fa-instagram"></i>
                 </li>
-                <li class="socia_list_icon">
+                <li class="footer__list_icon">
                     <i class="fab fa-behance-square"></i>
                 </li>
-                <li class="socia_list_icon">
+                <li class="footer__list_icon">
                     <i class="fas fa-basketball-ball"></i>
                 </li>
             </ul>
-            <p class="last_words en">Like me on<br>
+            <p class="footer__last_words en">Like me on<br>
                 LinkedIn, Instagram, Behance, Dribble</p>
-            <p class="last_words ru">Поддержите меня на:<br>
+            <p class="footer__last_words ru hidden">Поддержите меня на:<br>
                 LinkedIn, Instagram, Behance, Dribble</p>
         </div>
     </footer>
-    <div class="modal_dialog">
-        <form class="modal_form">
-            <h3 class="ru">Отправить сообщение</h3>
+    <div class="modal-warp hidden">
+        <form class="modal-warp__form modal-form">
+            <h3 class="ru hidden">Отправить сообщение</h3>
             <h3 class="en">Send message</h3>
-            <input class="modal_form_name" type="text" placeholder="Имя | Name">
-            <input class="modal_form_email" type="text" placeholder="Email">
-            <input class="modal_form_message" type="text" placeholder="Сообщение | Message">
-            <div class="modal_form_buttons">
-                <button class="modal_form_button" type="submit" name="button"><span class="ru">Отправить</span><span class="en">Send</span></button>
-                <button type="button" class=" modal_form_button btn cancel" onclick="closeForm()"><span class="ru">Закрыть</span><span class="en">Close</span></button>
+            <input class="modal-form_name" type="text" placeholder="Имя | Name">
+            <input class="modal-form_email" type="text" placeholder="Email">
+            <textarea class="modal-form_message" rows="5" placeholder="Сообщение | Message"></textarea>
+            <div class="modal-form_buttons">
+                <button class="modal-form_button" type="submit" name="button"><span class="ru hidden">Отправить</span><span
+                        class="en">Send</span></button>
+                <button type="button" class=" modal-form_button btn cansel"><span
+                        class="ru hidden">Закрыть</span><span class="en">Close</span></button>
             </div>
         </form>
     </div>
+    <div class="side-navbar">
+        <a href="#main" class="side-navbar__dot side-navbar__dot-active "></a>
+        <a href="#about_me" class="side-navbar__dot"></a>
+        <a href="#skills" class="side-navbar__dot"></a>
+        <a href="#portfolio" class="side-navbar__dot"></a>
+        <a href="#footer" class="side-navbar__dot"></a>
+    </div>
     <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,53 @@
+.header
+    background-color: #ffffff
+    &-fixed
+        transition-duration: 1s
+        background-color: rgb(255, 255, 255)
+        position: fixed
+        width: 100%
+        top: -55px
+        transform: translate(0, 50px)
+        @media screen and (max-width: 768px)
+            display: none
+        &::after
+            content: ''
+            border-bottom: #070707 2px solid
+            display: block
+            position: absolute
+            bottom: 0
+            width: 100%
+            animation: border
+            animation-duration: 2s
+            margin-left: 50%
+            transform: translateX(-50%)
+    &__navbar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 80px
+        width: 100%
+        position: relative
+        &::after
+            content: ''
+            border-bottom: #070707 2px solid
+            width: 100%
+            display: block
+            position: absolute
+            bottom: 0
+        a
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        @media screen and (max-width: 768px)
+            display: none
+    &__button
+        background-color: rgba(7, 7, 7, 1)
+        width: 160px
+        height: 40px
+        font-size: 14px
+        font-weight: 700
+        border-radius: 20px
+        border: none
+        color: #ffffff
+        cursor: pointer
+

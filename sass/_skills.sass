@@ -1,0 +1,35 @@
+
+.skills
+    padding: 100px 0
+    background-color: #ffffff
+    &__description
+        margin-top: 60px
+        font-size: 18px
+        font-weight: 500
+        text-align: center
+        color: #070707
+    &__programs 
+        padding: 0
+        display: flex
+        list-style: none
+        margin-top: 80px
+        justify-content: space-between
+        flex-wrap: wrap
+        @media (max-width: 600px)
+            justify-content: space-around
+    .skills__program
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        min-height: 210px
+        max-width: 167px
+        text-align: center
+        margin: 15px
+        img
+            max-width: 90px
+            max-height: 90px
+        p
+            color: rgba(130, 130, 130, 1)
+            font-size: 14px
+            font-weight: 700
